@@ -147,9 +147,9 @@ const enterLetter = (e, condn) => {
         document.querySelector(".letters").innerHTML = ""
         return 
     }
-    if(e == mandatory_char)
+    if(e.innerHTML == mandatory_char)
         classname = "mandatory-character"
-    else if(characters.includes(e))
+    else if(characters.includes(e.innerHTML))
         classname = "valid"
     else
         classname = "invalid"
