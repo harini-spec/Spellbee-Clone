@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Spelling Bee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="./assets/final_logo.png">
+    <link rel="stylesheet" href="./static/MainStyles.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./static/MainScript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            loadToastr();
+            loadRemarks();
+        });
+    </script>
+</head>
+<body>
+    <div class="main_container">
+        <div class="keyboard_container">
+            <div class="input-container-main">
+                <div class="input-container">
+                    <div class="letters"></div>
+                    <span class="cursor"></span>
+                </div>
+            </div>
+        
+            <div class="letters-container">
+                <button class="btn btn-light btn1" id="D" onclick="enterLetter(this, 'id')">D</button>
+                <button class="btn btn-light btn2" id="O" onclick="enterLetter(this, 'id')">O</button>
+                <button class="btn btn-light btn3" id="H" onclick="enterLetter(this, 'id')">H</button>
+    
+                <button class="btn btn-light btn4 main-letter" id="N" onclick="enterLetter(this, 'id')">N</button>
+    
+                <button class="btn btn-light btn5" id="M" onclick="enterLetter(this, 'id')">M</button>
+                <button class="btn btn-light btn6" id="E" onclick="enterLetter(this, 'id')">E</button>
+                <button class="btn btn-light btn7" id="Y" onclick="enterLetter(this, 'id')">Y</button>
+            </div>
+            <div class="buttons-container">
+                <button class="btn del" onclick="deleteLetter()">Delete</button>
+                <button class="btn refresh" onclick="scrambleLetters()"><i class="fa-solid fa-arrows-rotate"></i></button>
+                <button class="btn enter" onclick="checkWord()">Enter</button>
+            </div>
+        </div>
+        <div class="answers_container">
+            <!-- <div class="line"></div> -->
+            <div class="remark-container"></div>
+            <div class="text-box">
+                <div class="header">
+                    You have found 0 words
+                </div>
+                <div class="found_words">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

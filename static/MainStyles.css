@@ -1,0 +1,229 @@
+.main_container{
+    display: flex;
+}
+
+.keyboard_container{
+    flex: 50%;
+}
+
+.answers_container{
+    margin: 80px auto;
+    flex: 50%;
+}
+
+.cursor {
+    background-color: rgb(247,218,33);
+    width: 0.25rem;
+    height: 2.5rem;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: rgb(247,218,33);
+    }
+}
+
+.input-container-main{
+    margin: 100px 0px 10px 260px !important;
+    width: 60%;
+    overflow: hidden;
+}
+
+.input-container{
+    width: 50%;
+    margin: auto;
+    display: flex;
+}
+
+.inp{
+    margin: auto !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+}
+
+.invalid{
+    color: rgb(220,220,220);
+}
+
+.mandatory-character{
+    color: rgb(247,218,33);
+}
+
+.valid{
+    color: black;
+}
+
+.letters-container button{
+    position: absolute;
+    clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
+    height: 85px;
+    width: 90px;
+    display: flex;
+    background-color: rgb(230,230,230);
+    padding-top: 25px !important;
+    font-weight: 700 !important;
+    font-size: 22px !important;
+    justify-content: center;
+}
+
+.main-letter{
+    background-color: rgb(247,218,33) !important;
+}
+
+.btn1{
+    margin-top: 50px;
+    margin-left: 371px;
+}
+
+.btn2{
+    margin-top: 3px;
+    margin-left: 445px;
+}
+
+.btn3{
+    margin-top: 50px;
+    margin-left: 520px;
+}
+
+.btn4{
+    margin-top: 98px;
+    margin-left: 445px;
+}
+
+.btn5{
+    margin-top: 144px;
+    margin-left: 369px;
+}
+
+.btn6{
+    margin-top: 144px;
+    margin-left: 521px;
+}
+
+.btn7{
+    margin-top: 192px;
+    margin-left: 445px;
+}
+
+.buttons-container{
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 340px;
+}
+
+.buttons-container button{
+    margin: 7px;
+}
+
+.del, .enter{
+    border: 1.5px solid rgb(232,232,232);
+    padding: 15px 25px;
+    border-radius: 18px;
+}
+
+.refresh{
+    border: 1.5px solid rgb(232,232,232);
+    border-radius: 50%;
+    padding: 15px 20px !important;
+}
+
+.buttons-container button:hover{
+    border: 1.5px solid rgb(232,232,232);
+}
+
+.text-box{
+    width: 60%;
+    margin: 10px 0px;
+    min-height: 500px;
+    height: auto;
+    border: 1.5px solid rgb(232,232,232);
+    border-radius: 10px;
+}
+
+.text-box .header, .correct-word{
+    padding: 10px 20px;
+}
+
+hr{
+    width: 170px;
+    margin: 2px 0px !important;
+}
+
+.remark-container{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.score{
+    background-color: rgb(230,230,230);
+    height: 10px;
+    width: 10px;
+    margin: 29px 20px;
+    padding: 0px 5px;
+    border-radius: 10px;
+}
+
+.last{
+    background-color: rgb(230,230,230);
+    height: 10px;
+    width: 10px;
+    margin: 29px 20px;
+    padding: 0px 5px;
+}
+
+.current_score {
+    background-color: rgb(247,218,33);
+    font-size: 12px;
+    margin: 16px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    position: sticky;
+}
+
+.line{
+    width: 428px;
+    margin-left: 160px;
+    margin-top: 0px;
+    position: absolute;
+    border: 1px solid rgb(230,230,230);
+}
+
+.rank{
+    margin: 0 20px;
+    font-weight: 700;
+    left: 0;
+    min-width: 100px;
+    max-width: 100px;
+    /* border: 2px solid black; */
+}
+
+@media(max-width:1400px){
+    .main_container{
+        flex-wrap: wrap;
+    }
+
+    .keyboard_container{
+        flex: 100% !important;
+    }
+    
+    .answers_container{
+        margin: 400px auto !important;
+        flex: 100% !important;
+    }
+
+    .remark-container{
+        margin: 80px 300px !important;
+        flex: 50%;
+    }
+    
+    .text-box{
+        width: 60%;
+        margin: auto;
+        height: 500px;
+    }
+}
